@@ -127,7 +127,7 @@ def main(config_file, directory, outdir):
 
     # Generate font and save as a .ttf file
     outfile = os.path.join(
-        os.path.abspath(outdir), config["props"].get("filename", "Example")
+        outdir, config["props"].get("filename", "Example")
     )
     outfile = outfile + ".ttf" if not outfile.endswith(".ttf") else outfile
     sys.stderr.write("\nGenerating %s...\n" % outfile)
