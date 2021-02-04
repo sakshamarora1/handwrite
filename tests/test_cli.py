@@ -11,8 +11,8 @@ class TestCLI(unittest.TestCase):
     def setUp(self):
         self.file_dir = os.path.dirname(os.path.abspath(__file__))
         self.temp_dir = tempfile.mkdtemp()
-        os.mkdir(self.temp_dir + os.sep + "test")
-        os.mkdir(self.temp_dir + os.sep + "test2")
+        # os.mkdir(self.temp_dir + os.sep + "test")
+        # os.mkdir(self.temp_dir + os.sep + "test2")
 
     def tearDown(self):
         shutil.rmtree(self.temp_dir)
@@ -27,7 +27,7 @@ class TestCLI(unittest.TestCase):
             ]
         )
         self.assertTrue(
-            os.path.exists(os.path.join(self.temp_dir, "test", "MyFont.ttf"))
+            os.path.exists(os.path.join(self.temp_dir, "test.ttf"))
         )
 
         # Check working with optional parameters
@@ -50,5 +50,5 @@ class TestCLI(unittest.TestCase):
                     )
                 )
         self.assertTrue(
-            os.path.exists(os.path.join(self.temp_dir, "test2", "MyFont.ttf"))
+            os.path.exists(os.path.join(self.temp_dir, "test2.ttf"))
         )
