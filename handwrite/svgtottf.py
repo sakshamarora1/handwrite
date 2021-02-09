@@ -127,7 +127,7 @@ def generateFont(config, directory, outdir, index=0):
     elif isinstance(filename, list):
         filename = filename[index]
 
-    outfile = os.path.join(outdir, str(filename))
+    outfile = outdir + os.sep + str(filename)
     outfile = outfile + ".ttf" if not outfile.endswith(".ttf") else outfile
     sys.stderr.write("\nGenerating %s...\n" % outfile)
     font.generate(outfile)
