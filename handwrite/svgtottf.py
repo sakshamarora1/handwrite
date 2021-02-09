@@ -32,7 +32,7 @@ def loadConfig(filename="default"):
 
 def setProperties(font, config, index):
     props = config["props"]
-    lang = props.pop("lang", "English (US)")
+    lang = props.get("lang", "English (US)")
     family = props.get("filename", "Example")
     style = props.get("style", "Regular")
     if isinstance(family, list):
@@ -43,7 +43,7 @@ def setProperties(font, config, index):
     font.familyname = family
     font.fontname = family + "-" + style
     font.fullname = family + " " + style
-    font.encoding = props.pop("encoding", "UnicodeFull")
+    font.encoding = props.get("encoding", "UnicodeFull")
 
     for k, v in props.items():
         if hasattr(font, k):
