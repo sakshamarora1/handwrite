@@ -134,7 +134,7 @@ def generateFont(config, characters_dir, outdir, index=0):
     filename = config["props"].get("filename", "Example")
     if isinstance(filename, list):
         filename = filename[index]
-    outfile = outdir + os.sep + str(filename)
+    outfile = str(outdir + os.sep + filename)
     outfile = outfile + ".ttf" if not outfile.endswith(".ttf") else outfile
     sys.stderr.write("\nGenerating %s...\n" % outfile)
     font.generate(outfile)
