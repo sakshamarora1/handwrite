@@ -67,7 +67,7 @@ def addGlyphs(font, config, unicode_mapping, directory):
         unicode_mapping.setdefault(k, g.glyphname)
         # Get outlines
         src = "{}/{}.svg".format(k, k)
-        src = os.path.join(directory, src)
+        src = directory + os.sep + src
         g.importOutlines(src, IMPORT_OPTIONS)
         g.removeOverlap()
 
@@ -138,7 +138,7 @@ def main(config_file, directory, outdir, sheet):
 
     if os.path.isdir(sheet):
         for index, sheet_name in enumerate(os.listdir(sheet)):
-            characters_dir = os.path.join(directory, os.path.splitext(sheet_name)[0])
+            characters_dir = directory + os.sep + os.path.splitext(sheet_name)[0]
             generateFont(config, characters_dir, outdir, index)
     else:
         generateFont(config, directory, outdir)
