@@ -103,21 +103,21 @@ def generateFontFile(filename, outdir, config_file, font):
         + os.sep
         + (filename + ".ttf" if not filename.endswith(".ttf") else filename)
     )
+    x = "No Error"
+    try:
+        if os.path.exists(outfile):
+            outfile = str(
+                os.path.splitext(outfile)[0]
+                + "-"
+                + os.path.splitext(os.path.basename(config_file))[0]
+                + ".ttf"
+            )
+        while os.path.exists(outfile):
+            outfile = os.path.splitext(outfile)[0] + "(1).ttf"
+    except Exception, e:
+        x = str(e)
 
-    if outfile is None:
-        outfile = "abc"
-
-    if os.path.exists(outfile):
-        outfile = str(
-            os.path.splitext(outfile)[0]
-            + "-"
-            + os.path.splitext(os.path.basename(config_file))[0]
-            + ".ttf"
-        )
-
-    while os.path.exists(outfile):
-        outfile = os.path.splitext(outfile)[0] + "(1).ttf"
-
+    sys.stderr.write(x)
     sys.stderr.write("\nGenerating %s...\n" % outfile)
     font.generate(outfile)
 
