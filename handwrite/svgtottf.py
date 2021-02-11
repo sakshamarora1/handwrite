@@ -114,7 +114,7 @@ def generateFontFile(filename, outdir, config_file, font):
             )
         while os.path.exists(outfile):
             outfile = os.path.splitext(outfile)[0] + "(1).ttf"
-    except Exception, e:
+    except Exception as e:
         x = str(e)
 
     sys.stderr.write(x)
