@@ -11,7 +11,7 @@ setuptools.setup(
     description="Convert text to custom handwriting",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/builtree/handwrite",
+    url="https://github.com/yashlamba/handwrite",
     packages=setuptools.find_packages(),
     install_requires=["opencv-python", "Pillow"],
     extras_require={

@@ -2,7 +2,7 @@
 
 ## Creating your Handwritten Sample
 
-1. Take a printout of the [sample form](https://github.com/builtree/handwrite/raw/main/handwrite_sample.pdf).
+1. Take a printout of the [sample form](https://github.com/yashlamba/handwrite/raw/main/handwrite_sample.pdf).
 
 2. Fill the form using the image below as a reference.
 
@@ -27,10 +27,11 @@ Your form should look like this:
 3.  (Optional) Config file containing custom options for your font can also be passed using
     the `--config [CONFIG FILE]` argument.
 
-    ???+ note 
-        - If you expicitly pass the metadata (filename, family or style) as CLI arguments, they are given a preference over the default config file data.
+        ???+ note - If you expicitly pass the metadata (filename, family or style) as CLI arguments, they are given a preference over the default config file data.
 
-         - If no config file is provided for an input then the [default config file](https://github.com/builtree/handwrite/blob/main/handwrite/default.json) is used.
+             - If no config file is provided for an input then the [default config file](https://github.com/yashlamba/handwrite/blob/main/handwrite/default.json) is used.
+
+    yashlamba
 
 4.  Your font will be created as `OUTPUT DIRECTORY/OUTPUT FONT NAME.ttf`. Install the font in your system.
 

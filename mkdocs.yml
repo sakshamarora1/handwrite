@@ -1,11 +1,11 @@
 site_name: "Handwrite"
 site_description: "Official Site for Handwrite"
 site_author: "Team Handwrite"
-site_url: "https://builtree.github.io/handwrite"
+site_url: "https://yashlamba.github.io/handwrite"
 
 # Repository
-repo_name: "builtree/handwrite"
-repo_url: "https://github.com/builtree/handwrite"
+repo_name: "yashlamba/handwrite"
+repo_url: "https://github.com/yashlamba/handwrite"
 
 nav:
     - Home: "index.md"
